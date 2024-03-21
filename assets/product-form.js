@@ -30,7 +30,20 @@ if (!customElements.get('product-form')) {
         config.headers['X-Requested-With'] = 'XMLHttpRequest';
         delete config.headers['Content-Type'];
 
-        const formData = new FormData(this.form);
+        const formProperty = new FormData(this.form);
+
+        const varaintId = formProperty.get('id');
+        const varaintQty = formProperty.get('quantity') || 1;
+
+        const formData = {
+          'items': [
+            {
+              'id': varaintId,
+              'quantity': varaintQty
+            }
+          ]
+        };
+
         if (this.cart) {
           formData.append(
             'sections',

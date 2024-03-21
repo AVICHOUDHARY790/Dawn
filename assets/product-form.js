@@ -46,7 +46,7 @@ if (!customElements.get('product-form')) {
 
         if (this.cart) {
           formData.push(
-            'sections',
+            'sections', 
             this.cart.getSectionsToRender().map((section) => section.id)
           );
           formData.push('sections_url', window.location.pathname);
@@ -81,7 +81,7 @@ if (!customElements.get('product-form')) {
             if (!this.error)
               publish(PUB_SUB_EVENTS.cartUpdate, {
                 source: 'product-form',
-                productVariantId: varaintId,
+                productVariantId: formData.get('id'),
                 cartData: response,
               });
             this.error = false;

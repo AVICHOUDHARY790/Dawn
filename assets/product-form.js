@@ -45,11 +45,11 @@ if (!customElements.get('product-form')) {
         };
 
         if (this.cart) {
-          formData.push(
+          formData.append(
             'sections',
             this.cart.getSectionsToRender().map((section) => section.id)
           );
-          formData.push('sections_url', window.location.pathname);
+          formData.append('sections_url', window.location.pathname);
           this.cart.setActiveElement(document.activeElement);
         }
         config.body = formData;

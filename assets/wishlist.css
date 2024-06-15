@@ -1,0 +1,84 @@
+
+.wishlist-Product {
+  display: flex;
+}
+product-card .wishlist-Product {
+  position: absolute;
+  z-index: 1;
+  top: 18px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  box-shadow: 0 0 4px;
+}
+.wishlist-Product svg {
+  max-width: 25px;
+  width: 100%;
+  height: auto;
+  fill: #0000;
+  stroke: #000;
+  stroke-width: 4px;
+  padding: 2px;
+  display: flex;
+  overflow: visible;
+}
+.wishlist-Product.active svg {
+  fill: #000;
+  stroke: none;
+}
+a#wishlist_link svg {
+  fill: #0000;
+  max-width: 30px;
+  stroke: currentColor;
+  stroke-width: 6px;
+  overflow: visible;
+  transition: all .3s ease-in-out;
+}
+a#wishlist_link.active svg {
+  fill: currentColor;
+  stroke: none;
+}
+header-drawer {
+  display: flex;
+}
+.product-form__buttons-with__wishlist {
+  display: flex;
+  gap: 10px;
+}
+.product-form__buttons-with__wishlist .wishlist-Product {
+  min-width: fit-content;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.wishlist_link  {
+  position: relative;
+}
+span.wishlist-bubble {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background-color: rgb(var(--header-accent-color));
+  box-shadow: 0 0 0 2px rgba(var(--bg-color));
+  color: rgba(var(--bg-color));
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.page-wishlist.wishlist_header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.page-wishlist-link {
+  text-align: center;
+  max-width: 200px;
+}

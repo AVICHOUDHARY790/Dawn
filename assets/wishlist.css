@@ -1,4 +1,3 @@
-
 .wishlist-Product {
   display: flex;
 }
@@ -29,7 +28,7 @@ product-card .wishlist-Product {
   overflow: visible;
 }
 .wishlist-Product.active svg {
-  fill: #000;
+  fill: red;
   stroke: none;
 }
 a#wishlist_link svg {
@@ -68,7 +67,7 @@ span.wishlist-bubble {
   padding: 0 5px;
   border-radius: 9px;
   background-color: rgb(var(--header-accent-color));
-  box-shadow: 0 0 0 2px rgba(var(--bg-color));
+  /* box-shadow: 0 0 0 2px rgba(var(--bg-color)); */
   color: rgba(var(--bg-color));
   font-size: 11px;
   font-weight: 700;
